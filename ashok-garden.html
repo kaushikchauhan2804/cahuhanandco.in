@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashok Garden | Chauhan & Co</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        img { pointer-events: none; user-select: none; -webkit-user-drag: none; }
+        .gallery-img { pointer-events: auto; cursor: zoom-in; transition: transform 0.4s ease; }
+        .gallery-img:hover { transform: scale(1.03); }
+        #lightbox {
+            display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(15, 23, 42, 0.98); justify-content: center; align-items: center;
+        }
+        #lightbox img { max-width: 90%; max-height: 85%; border: 2px solid #f59e0b; pointer-events: auto; }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100">
+
+    <div id="lightbox" onclick="this.style.display='none'">
+        <img id="lightbox-img" src="">
+    </div>
+
+    <header class="bg-slate-900 text-white sticky top-0 z-50 border-b border-slate-800">
+        <nav class="max-w-7xl mx-auto flex justify-between items-center p-4">
+            <div class="flex items-center gap-4">
+                <div class="text-xl font-black tracking-tighter uppercase text-amber-500 italic">Project Archive: Ashok Garden</div>
+            </div>
+            <a href="index.html" class="text-[10px] font-bold uppercase tracking-widest text-amber-500 border border-amber-500 px-4 py-2 hover:bg-amber-500 hover:text-slate-900 transition">
+                Back to Home
+            </a>
+        </nav>
+    </header>
+
+    <main class="max-w-7xl mx-auto py-16 px-8">
+        
+        <div class="mb-16 border-l-4 border-amber-500 pl-6">
+            <h1 class="text-5xl font-black uppercase italic">Ashok <span class="text-amber-500">Garden</span></h1>
+            <p class="text-slate-400 mt-2 uppercase tracking-widest text-xs font-bold">Premium Residential Infrastructure & Hardscape</p>
+        </div>
+
+        <div class="mb-20">
+            <h2 class="text-xs font-black mb-6 uppercase tracking-[0.3em] text-amber-500">01. External Structure & Facade</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="https://i.postimg.cc/mcTCWgKg/ASHOK-GARDEN.png" class="gallery-img w-full h-64 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+                <img src="https://i.postimg.cc/TyTgv3FF/ASHOK-GARDEN-2.png" class="gallery-img w-full h-64 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+                <img src="https://i.postimg.cc/4KXVRxqj/ASHOK-GARDEN-3.png" class="gallery-img w-full h-64 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+                <img src="https://i.postimg.cc/Y4tYBCZJ/ASHOK-GARDEN-4.png" class="gallery-img w-full h-64 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+                <img src="https://i.postimg.cc/WDsgc1xP/ASHOK-GARDEN-5.png" class="gallery-img w-full h-64 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+                <img src="https://i.postimg.cc/TyTgv3BR/ASHOK-GARDEN-6.png" class="gallery-img w-full h-64 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+                <img src="https://i.postimg.cc/KKmBh8Cx/ASHOK-GARDEN-7.png" class="gallery-img w-full h-64 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+                <img src="https://i.postimg.cc/hJKTRtNP/ASHOK-GARDEN-8.png" class="gallery-img w-full h-64 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+            </div>
+        </div>
+
+        <div class="mb-20">
+            <h2 class="text-xs font-black mb-6 uppercase tracking-[0.3em] text-amber-500">02. Clubhouse Development</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="https://i.postimg.cc/67zRWNNp/CLUBHOUSE.png" class="gallery-img w-full h-48 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+                <img src="https://i.postimg.cc/nsT7FttH/CLUBHOUSE-2.png" class="gallery-img w-full h-48 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+                <img src="https://i.postimg.cc/KKQLGyyG/CLUBHOUSE-3.png" class="gallery-img w-full h-48 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+                <img src="https://i.postimg.cc/KKQLGyyv/CLUBHOUSE-4.png" class="gallery-img w-full h-48 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+            </div>
+        </div>
+
+        <div class="mb-20">
+            <h2 class="text-xs font-black mb-6 uppercase tracking-[0.3em] text-amber-500">03. Playground & Hardscape Engineering</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <img src="https://i.postimg.cc/TLwbhHR0/GARDEN-PLAYGROUND-HARDESCAPE.png" class="gallery-img w-full h-40 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+                <img src="https://i.postimg.cc/p9k8Wttj/GARDEN-PLAYGROUND-HARDESCAPE-2.png" class="gallery-img w-full h-40 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+                <img src="https://i.postimg.cc/CZJDhVVk/GARDEN-PLAYGROUND-HARDESCAPE-3.png" class="gallery-img w-full h-40 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+                <img src="https://i.postimg.cc/mcVMLGGM/GARDEN-PLAYGROUND-HARDESCAPE-4.png" class="gallery-img w-full h-40 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+                <img src="https://i.postimg.cc/67zRWNNd/GARDEN-PLAYGROUND-HARDESCAPE-5.png" class="gallery-img w-full h-40 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+                <img src="https://i.postimg.cc/Z9j3bhhP/GARDEN-PLAYGROUND-HARDESCAPE-6.png" class="gallery-img w-full h-40 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+                <img src="https://i.postimg.cc/8J5vsn1J/GARDEN-PLAYGROUND-HARDESCAPE-7.png" class="gallery-img w-full h-40 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+                <img src="https://i.postimg.cc/r0m4zY8R/GARDEN-PLAYGROUND-HARDESCAPE-8.png" class="gallery-img w-full h-40 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+                <img src="https://i.postimg.cc/ZBRN0DT3/GARDEN-PLAYGROUND-HARDESCAPE-9.png" class="gallery-img w-full h-40 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+                <img src="https://i.postimg.cc/k64SDhnF/GARDEN-PLAYGROUND-HARDESCAPE-10.png" class="gallery-img w-full h-40 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+                <img src="https://i.postimg.cc/G82D9Scj/GARDEN-PLAYGROUND-HARDESCAPE-11.png" class="gallery-img w-full h-40 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+                <img src="https://i.postimg.cc/jw5fCksX/GARDEN-PLAYGROUND-HARDESCAPE-12.png" class="gallery-img w-full h-40 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+            </div>
+        </div>
+
+        <div class="mb-20">
+            <h2 class="text-xs font-black mb-6 uppercase tracking-[0.3em] text-amber-500">04. Pool Area & Grand Lobby</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                <img src="https://i.postimg.cc/5HtymYZ4/POOL-LOBBY.png" class="gallery-img w-full h-40 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+                <img src="https://i.postimg.cc/YvRjgfyH/POOL-LOBBY-2.png" class="gallery-img w-full h-40 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+                <img src="https://i.postimg.cc/18B46cYS/POOL-LOBBY-3.png" class="gallery-img w-full h-40 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+                <img src="https://i.postimg.cc/BjptDcws/POOL-LOBBY-4.png" class="gallery-img w-full h-40 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+                <img src="https://i.postimg.cc/5Xgjvqkb/POOL-LOBBY-5.png" class="gallery-img w-full h-40 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+                <img src="https://i.postimg.cc/K1f4LrsG/POOL-LOBBY-6.png" class="gallery-img w-full h-40 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+                <img src="https://i.postimg.cc/mcrkSzKK/POOL-LOBBY-7.png" class="gallery-img w-full h-40 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+                <img src="https://i.postimg.cc/nsLr1j6b/POOL-LOBBY-8.png" class="gallery-img w-full h-40 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+                <img src="https://i.postimg.cc/1gzXKnbk/POOL-LOBBY-9.png" class="gallery-img w-full h-40 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+                <img src="https://i.postimg.cc/McGHYMhJ/POOL-LOBBY-10.png" class="gallery-img w-full h-40 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+                <img src="https://i.postimg.cc/cKJCcgVN/POOL-LOBBY-11.png" class="gallery-img w-full h-40 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+                <img src="https://i.postimg.cc/B8vbCLd0/POOL-LOBBY-12.png" class="gallery-img w-full h-40 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+                <img src="https://i.postimg.cc/jWj2hwGT/POOL-LOBBY-13.png" class="gallery-img w-full h-40 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+                <img src="https://i.postimg.cc/DWz0cJt7/POOL-LOBBY-14.png" class="gallery-img w-full h-40 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+                <img src="https://i.postimg.cc/jWj2hwGs/POOL-LOBBY-15.png" class="gallery-img w-full h-40 object-cover rounded border border-slate-800" onclick="openLightbox(this.src)">
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-slate-950 py-12 px-8 border-t border-slate-800 text-center">
+        <p class="text-[10px] font-bold uppercase tracking-[0.5em] text-slate-600">Ashok Garden Civil Data &copy; 2026 Chauhan & Co</p>
+    </footer>
+
+    <script>
+        function openLightbox(src) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+        document.addEventListener('contextmenu', event => event.preventDefault());
+    </script>
+
+</body>
+</html>
